@@ -76,7 +76,7 @@ def aerodynamicForce(Mach, k, xea, nPannels, integrals=None):
     return Q
 
 
-def PossiosKernel(x, mach, k, integrals=None):
+def PossiosKernel(x, Mach, k, integrals=None):
     '''
     Possios kernel reformulated by Fromme and Golberg, 1980
     '''
@@ -167,7 +167,7 @@ def PoissosIntegrals(Mach, kx):
     return I
 
     
-def defineIntegrals(Mack, k=2., n=3000):
+def defineIntegrals(Mach, k=2., n=3000):
     '''
     Pre-computes integrals I1, I2, I3, and I4 (Fromme and Golberg, 1980)
     By default, reduced frequencies up to k=2 are considered.
